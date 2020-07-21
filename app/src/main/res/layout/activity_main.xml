@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button_iron_maiden"
+        android:id="@+id/button_aces_high"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -19,5 +19,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginLeft="16dp" />
+
+    <Button
+        android:id="@+id/button_make_believe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:text="@string/button_make_believe"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/button_aces_high"
+        app:layout_constraintStart_toEndOf="@+id/button_aces_high"
+        app:layout_constraintTop_toTopOf="@+id/button_aces_high"
+        android:layout_marginLeft="8dp" />
 
 </android.support.constraint.ConstraintLayout>
