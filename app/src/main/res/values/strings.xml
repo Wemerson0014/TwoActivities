@@ -5,7 +5,10 @@
     <string name="button_aces_high">Aces High</string>
     <string name="button_make_believe">Make Believe</string>
     <string name="button_stairway_to_heaven">Stairway To Heaven</string>
+    <string name="letter_aces_high">There goes the siren that warns of the air raid. \nThere comes the sound of the guns sending flak, \nOut for the scramble, we have got to get airborne\nGot to get up for the coming attack\nJump in the cockpit and start up the engines\nRemove all the wheel blocks, there is no time to waste\nGathering speed as we head down the runway\nGot to get airborne before it is too late\nRunning, scrambling, flying\nRolling, turning, diving, going in again\nRunning, scrambling, flying\nRolling, turning, diving\nRun, live to fly\nFly to live\nDo or die\nWo not you run?\nLive to fly\nFly to live\nAces high\nMove in to fire at the mainstream of bombers\nLet off a sharp burst and then turn away\nRoll over, spin round to come in behind them\nMove to their blindsides and firing again\nBandits at 8 on clock move in behind us\nTen ME-109s out of the sun\nAscending and turning our spitfires to face them\nHeading straight for them, I press down my guns\nRolling, turning, diving\nRolling, turning, diving, doing it again\nRolling, turning, diving\nRolling, turning, diving\nRun, live to fly\nFly to live\nDo or die\nWo not you run?\nLive to fly\nFly to live\nAces high\n\nFonte: https://www.letras.mus.br/iron-maiden/19286/</string>
 
-    <!-- Second Actitivty -->
+    <!-- Second Activity -->
+    <string name="activity_label">Second Activity</string>
+    <string name="text_header">Music Letter</string>
 
 </resources>
