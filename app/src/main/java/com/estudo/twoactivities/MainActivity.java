@@ -56,7 +56,11 @@ public class MainActivity extends AppCompatActivity {
         stairwayToHeaven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "STAIRWAY TO HEAVEN", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "STAIRWAY TO HEAVEN", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), SecondActivity.class);
+                String messageStairToHeaven = getString(R.string.letter_stairway_to_heaven);
+                intent.putExtra(STAIRWAY_TO_HAVE, messageStairToHeaven);
+                startActivity(intent);
             }
         });
     }
