@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     public static final String ACES_HIGH_MESSAGE = "acesHighMessage";
+    public static final String MAKE_BELIEVE_MESSAGE = "makeBelieveMessage";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
         makeBelieve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "MAKE BELIEVE", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(v.getContext(), SecondActivity.class);
+                String messageMakeBelieve = getString(R.string.letter_make_believe);
+                intent.putExtra(MAKE_BELIEVE_MESSAGE, messageMakeBelieve);
+                startActivity(intent);
             }
         });
     }
