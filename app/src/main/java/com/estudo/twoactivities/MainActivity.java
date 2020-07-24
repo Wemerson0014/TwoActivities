@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         acesHighButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(), "ACES HIGH", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(v.getContext(), SecondActivity.class);
                 String message = getString(R.string.letter_aces_high);
                 intent.putExtra(ACES_HIGH_MESSAGE, message);
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         stairwayToHeaven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(getApplicationContext(), "STAIRWAY TO HEAVEN", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), SecondActivity.class);
                 String messageStairToHeaven = getString(R.string.letter_stairway_to_heaven);
                 intent.putExtra(STAIRWAY_TO_HAVE, messageStairToHeaven);
