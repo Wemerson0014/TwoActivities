@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String ACES_HIGH_MESSAGE = "acesHighMessage";
     public static final String MAKE_BELIEVE_MESSAGE = "makeBelieveMessage";
+    public static final String STAIRWAY_TO_HAVE = "stairwayToHeaven";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         acesHighLetterMusic();
         makeBelieveLetterMusic();
+        stairToHeavenLetterMusic();
     }
 
     public void acesHighLetterMusic() {
@@ -45,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 String messageMakeBelieve = getString(R.string.letter_make_believe);
                 intent.putExtra(MAKE_BELIEVE_MESSAGE, messageMakeBelieve);
                 startActivity(intent);
+            }
+        });
+    }
+
+    private void stairToHeavenLetterMusic() {
+        Button stairwayToHeaven = findViewById(R.id.button_Stairway_to_heaven);
+        stairwayToHeaven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "STAIRWAY TO HEAVEN", Toast.LENGTH_SHORT).show();
             }
         });
     }
