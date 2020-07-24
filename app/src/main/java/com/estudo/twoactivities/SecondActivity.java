@@ -9,7 +9,7 @@ public class SecondActivity extends AppCompatActivity {
 
     public static final String ACES_HIGH_MESSAGE = "acesHighMessage";
     public static final String MAKE_BELIEVE_MESSAGE = "makeBelieveMessage";
-    public static final String STAIRWAY_TO_HEAVEN = "stairwayToHeaven";
+    //public static final String STAIRWAY_TO_HEAVEN = "stairwayToHeaven";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
