@@ -6,60 +6,57 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String ACES_HIGH_MESSAGE = "acesHighMessage";
-    public static final String MAKE_BELIEVE_MESSAGE = "makeBelieveMessage";
-    public static final String STAIRWAY_TO_HAVE = "stairwayToHeaven";
+    public static final String LETTER_MUSIC = "letterMusic";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        acesHighLetterMusic();
-        makeBelieveLetterMusic();
-        stairToHeavenLetterMusic();
+        setOnClickListenerAcesHighButton();
+        setOnClickListenerMakeBelieveButton();
+        setOnClickListenerStairToHeavenButton();
     }
 
-    public void acesHighLetterMusic() {
+    public void setOnClickListenerAcesHighButton() {
         Button acesHighButton = findViewById(R.id.button_aces_high);
         acesHighButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), SecondActivity.class);
                 String message = getString(R.string.letter_aces_high);
-                intent.putExtra(ACES_HIGH_MESSAGE, message);
-                startActivity(intent);
+                startSecondActivityWithExtra(v.getContext(), message);
             }
         });
     }
 
-    public void makeBelieveLetterMusic() {
+    public void setOnClickListenerMakeBelieveButton() {
         Button makeBelieve = findViewById(R.id.button_make_believe);
         makeBelieve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), SecondActivity.class);
-                String messageMakeBelieve = getString(R.string.letter_make_believe);
-                intent.putExtra(MAKE_BELIEVE_MESSAGE, messageMakeBelieve);
-                startActivity(intent);
+                String message = getString(R.string.letter_make_believe);
+                startSecondActivityWithExtra(v.getContext(), message);
             }
         });
     }
 
-    private void stairToHeavenLetterMusic() {
-        Button stairwayToHeaven = findViewById(R.id.button_Stairway_to_heaven);
+    private void setOnClickListenerStairToHeavenButton() {
+        Button stairwayToHeaven = findViewById(R.id.button_stairway_to_heaven);
         stairwayToHeaven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), SecondActivity.class);
-                String messageStairToHeaven = getString(R.string.letter_stairway_to_heaven);
-                intent.putExtra(STAIRWAY_TO_HAVE, messageStairToHeaven);
-                startActivity(intent);
+                String message = getString(R.string.letter_stairway_to_heaven);
+                startSecondActivityWithExtra(v.getContext(), message);
             }
         });
+    }
+
+    private void startSecondActivityWithExtra(Context context, String value) {
+        Intent intent = new Intent(context, SecondActivity.class);
+        intent.putExtra(MainActivity.LETTER_MUSIC, value);
+        startActivity(intent);
     }
 }

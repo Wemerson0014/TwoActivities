@@ -12,5 +12,6 @@
     <!-- Second Activity -->
     <string name="activity_label">Second Activity</string>
     <string name="text_header">Music Letter</string>
+    <string name="text_error">Houve um erro inesperado. Por favor, tente novamente!</string>
 
 </resources>
